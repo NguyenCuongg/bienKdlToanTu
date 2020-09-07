@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form >
+        <p>Ammout</p>
+        <input type="text" name="Ammout" id="Ammout"></input> <br><br>
+        From Currency: <br>
+        <select id="tiengoc">
+           <option value="VND"> Việt Nam </option>
+           <option value="USA"> USA </option>
+
+        </select> <br><br>
+        To Currency: <br>
+        <select id="tiendoi">
+            <option value="USA">USA</option>
+            <option value="VND"> Việt Nam </option>
+        </select> <br><br>
+    <button type="button" onclick='a()'>Convert</button>
+    </form>
+
+    <div id="result"></div>
+</body>
+    <script>
+        function a() {
+            let tien= +document.getElementById('Ammout').value;
+           let tiengoc= document.getElementById('tiengoc').value;
+           let tiendoi= document.getElementById('tiendoi').value;
+           if (tiengoc=="USD" && tiendoi=="VND") {
+            let result = tien*23000;
+                document.getElementById("result").innerHTML = "Result: " + result + " VND";
+            }
+            else {
+                let result = tien/23000;
+                document.getElementById("result").innerHTML = "Result: " + result + " USD";
+            }
+                          
+           
+        }
+
+        
+
+
+    </script>
+
+</html>

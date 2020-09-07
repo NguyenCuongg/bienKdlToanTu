@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td> <input type="text" name="a" id="a" > </td>
+            <td> <input type="text" name="b" id="b" > </td>
+
+        </tr>
+        <tr>
+            <td> <input type="button" onclick='tong()'>addition(+)</td> 
+        </tr>
+        <tr>
+           </tr> <td> <input type="button" onclick='hieu()'>Subtraction(-)</td> 
+        </tr>
+        <tr>
+            <td> <input type="button" onclick='tich()'>Multiclication(X)</td> 
+        </tr>
+        <tr>
+            <td> <input type="button" onclick='thuong()'>Division(/)</td>
+        </tr>
+
+
+    </table>
+    <div id="kq"></div>
+    <script>
+        function tong() {
+             let y= +document.getElementById('a').value;
+             let z= +document.getElementById('b').value;
+             let kq=y+z;
+             document.getElementById("kq").innerHTML = "kq: " + kq 
+        }
+        function hieu() {
+             let y= +document.getElementById('a').value;
+             let z= +document.getElementById('b').value;
+             let kq=y-z;
+             document.getElementById("kq").innerHTML = "kq: " + kq 
+        }
+        function tich() {
+             let y= +document.getElementById('a').value;
+             let z= +document.getElementById('b').value;
+             let kq=y*z;
+             document.getElementById("kq").innerHTML = "kq: " + kq 
+        }
+        function thuong() {
+             let y= +document.getElementById('a').value;
+             let z= +document.getElementById('b').value;
+             let kq=y/z;
+             document.getElementById("kq").innerHTML = "kq: " + kq 
+        }
+    </script>
+</body>
+
+</html>
